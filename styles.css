@@ -1,93 +1,64 @@
-:root{
-    --color-red:red;
-    --color-blue:blue;
-    --color-green:green;
+:root {
+  --color-red: red;
+  --color-blue: blue;
+  --color-green: green;
 }
-*,*::before,*::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-color:lightskyblue ;
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    36deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(22, 21, 89, 1) 16%,
+    rgba(9, 9, 121, 1) 39%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
-.transition-property1{
-    height: 100px;
-    width: 100px;
+.transition-property1 {
+  height: 100px;
+  width: 100px;
 }
-.parent1{
-    width:100%;
-    height: 100%;
-    border: 4px solid rgba(0,0,0,0.1);
-    border-top: 4px solid #0077cc;
-    border-radius: 50%;
-    animation: spin 2s linear infinite;
+.parent1 {
+  width: 100%;
+  height: 100%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #0077cc;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
 }
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-.parent2{
-    background-color: var(--color-green);
-    height: 100px;
-    width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.child{
-    margin: 5px;
-    width: 20%;
-    height: 80%;
-    border-radius: 50%;
-    background-color: var(--color-red);
-    transition-duration: .5s;
-}
-.parent2:hover :not(:hover){
-    opacity: 0.1;
-}
-.parent3{
-    display: inline-block;
-    font-size: 3rem;
-    animation: left-right-vanish 3s linear 1 forwards;
-}
-@keyframes left-right-vanish{
-    from{
-        transform: translateX(0px);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(500px);
-    }
-}
-.parent4{
-    height: 250px;
-    width: 250px;
-}
-.parent4 img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    /* transition: transform 5s ease-in-out ; */
-    animation: rotate-small-big 3s ease-in-out 5 forwards;
-}
-.parent4:hover img{
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
     transform: rotate(360deg);
+  }
 }
-@keyframes rotate-small-big{
-    0%{
-        transform: rotate(0deg) scale(0); /*Keep in mind multiple transform one line directives are applied from right to left.*/
-    }
-    100%{
-        transform: rotate(360deg) scale(1);
-    }
+.my-bulb {
+  height: 300px;
+  width: 300px;
+  background-color: red;
 }
-
+.bulb {
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-left: 10px;
+}
+button {
+  margin: 5px 30px;
+  padding: 5px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
